@@ -1,5 +1,5 @@
 ﻿Public Class Product
-    Public Property IsActive() As Boolean
+    Inherits CommonBase
     Public Property Name() As String
     Public Property ProductNumber() As String
     Public Property SellStartDate As DateTime

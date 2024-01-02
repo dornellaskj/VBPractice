@@ -22,8 +22,8 @@ Module MainModule
         Console.WriteLine(prod.CalculateProfit())
         Console.WriteLine(prod.CalculateProfit(700))
         Console.WriteLine(Product.CalculateTheProfit(100, 200))
-
-
+        Console.WriteLine(prod.IsActive)
+        Console.WriteLine(prod.CreatedBy)
         Console.ReadKey()
 
     End Sub
