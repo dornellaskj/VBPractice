@@ -17,6 +17,13 @@ Module MainModule
         prod.SellStartDate = Date.Now()
         prod.CalculateSellEndDate(5)
         Console.WriteLine(prod.SellEndDate)
+        prod.IncrementSellEndDate()
+        Console.WriteLine(prod.SellEndDate)
+        Console.WriteLine(prod.CalculateProfit())
+        Console.WriteLine(prod.CalculateProfit(700))
+        Console.WriteLine(Product.CalculateTheProfit(100, 200))
+
+
         Console.ReadKey()
 
     End Sub
@@ -26,5 +33,7 @@ Module MainModule
         ListPrice = ListPrice + 1
         Console.WriteLine(ListPrice)
     End Sub
+
+
 
 End Module
