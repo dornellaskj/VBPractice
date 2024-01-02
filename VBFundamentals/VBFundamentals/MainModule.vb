@@ -13,7 +13,11 @@ Module MainModule
         IncrementListPrice()
         IncrementListPrice()
         IncrementListPrice()
-        Dim prod As New Product()
+        Dim prod As New Product() With {
+            .Name = "10 Speed Bike",
+            .StandardCost = 700,
+            .ProductNumber = 1
+        }
         prod.SellStartDate = Date.Now()
         prod.CalculateSellEndDate(5)
         Console.WriteLine(prod.SellEndDate)
@@ -24,6 +28,7 @@ Module MainModule
         Console.WriteLine(Product.CalculateTheProfit(100, 200))
         Console.WriteLine(prod.IsActive)
         Console.WriteLine(prod.CreatedBy)
+        Console.WriteLine(prod.GetClassData())
         Console.ReadKey()
 
     End Sub

@@ -34,4 +34,12 @@
         'can be accessed via the class name
         Return price - cost
     End Function
+    Overrides Function GetClassData() As String
+        Dim sb As New Text.StringBuilder(1024)
+
+        sb.AppendLine("Product Number: " + ProductNumber)
+        sb.AppendLine(MyBase.GetClassData)
+
+        Return sb.ToString()
+    End Function
 End Class
